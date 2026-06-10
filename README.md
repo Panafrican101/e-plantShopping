@@ -1,81 +1,102 @@
 # Paradise Nursery — e-plantShopping
 
-[![React Version](https://img.shields.io/badge/react-v18.x-61dafb?logo=react)](https://react.dev/)
-[![Redux Toolkit](https://img.shields.io/badge/redux--toolkit-v2.x-764abc?logo=redux)](https://redux-toolkit.js.org/)
-[![Vite](https://img.shields.io/badge/vite-v5.x-646cff?logo=vite)](https://vitejs.dev/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![React Version](https://img.shields.io/badge/react-v18.x-61dafb?logo=react)](https://react.dev/) [![Redux Toolkit](https://img.shields.io/badge/redux--toolkit-v2.x-764abc?logo=redux)](https://redux-toolkit.js.org/) [![Vite](https://img.shields.io/badge/vite-v5.x-646cff?logo=vite)](https://vitejs.dev/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Welcome to **Paradise Nursery**, an immersive, high-performance e-commerce frontend web application dedicated to houseplant enthusiasts. This platform bridges the gap between botanical curiosity and digital convenience, offering users a fully interactive journey from discovery to checkout preparation.
+Paradise Nursery is a polished React storefront for indoor plants and home greenery. It includes a landing page, categorized product browsing, a Redux-powered cart, and a checkout summary experience.
 
 ---
 
-## Repository Target
-* **Official Repository Name:** `e-plantShopping`
-* **Project Codename:** Paradise Nursery Storefront
+## 🚀 Project Summary
+
+This project demonstrates a frontend-only e-commerce experience using React and Redux Toolkit. Users can:
+
+- browse plants grouped by category
+- add products to a shopping cart
+- update quantities and remove items
+- view a checkout summary and confirm an order
+
+The app is styled with responsive CSS and uses local state to switch between landing, shop, cart, and checkout views.
 
 ---
 
-## 📖 Project Overview & Intent
+## ✨ Key Features
 
-The **e-plantShopping** application provides a seamless, state-driven storefront built entirely using modern React architecture. Designed for indoor plant lovers, the application features an immersive entry point that transitions into a deeply categorized product showcase. 
-
-By avoiding complex multi-page routing overhead, the application uses local view switches backed by global data stores, ensuring lightning-fast updates, zero page reloads, and absolute visual synchronicity across components.
-
----
-
-## 🚀 Key Features
-
-### 1. Welcome Landing Page (`App.jsx` & `AboutUs.jsx`)
-* **Atmospheric Design:** Rich, visual-gradient landing background loaded via optimized CSS styles.
-* **Corporate Mission Statement:** Dedicated "About Us" panel reflecting our commitment to green environments and sustainable shipping.
-* **Call to Action:** An optimized "Get Started" gatekeeping button that immediately moves users directly to the shop floor.
-
-### 2. Categorized Product Catalog (`ProductList.jsx`)
-* **Broad Selection:** Features 18 unique individual houseplant variations.
-* **Structured Taxonomy:** Items are grouped systematically across 3 operational care tiers:
-  * *Air Purifying* (e.g., Snake Plant, Peace Lily)
-  * *Low Maintenance* (e.g., ZZ Plant, Pothos)
-  * *Statement Pieces* (e.g., Fiddle Leaf Fig, Monstera)
-* **Smart UI Controls:** Individualized product action buttons dynamically mutate state to "Added to Cart" and lock (`disabled = true`) once selected to prevent unintended redundant items.
-
-### 3. State-Synchronized Navigation Layout
-* **Global Navigation:** Header toolbar pinned universally across view states (`position: sticky`).
-* **Dynamic Counter Badge:** Integrates a reactive shopping cart widget displaying cumulative quantities updated in real-time by store actions.
-
-### 4. Interactive Shopping Cart (`CartItem.jsx` & `CartSlice.jsx`)
-* **Granular Controls:** Quick-access inline increment (`+`) and decrement (`-`) mechanisms.
-* **Subtotal Engine:** Real-time multi-tier calculation parsing individual quantities against base unit pricing.
-* **Safe Deletion:** Interactive removal triggers that safely clean out entries, automatically refreshing global balances.
-* **Workflow Back-Tracking:** Single-click "Continue Shopping" fallback that safely preserves cart state while returning the user to their last location in the catalog.
+- **Landing Page** with brand messaging and a shop entry flow
+- **About Us** section describing the business mission
+- **Product Catalog** with categorized plant cards and price display
+- **Global Cart Badge** showing item count in real time
+- **Cart Management** with quantity +/-, remove item, and totals
+- **Checkout Summary** with order detail, shipping estimate, and confirmation
 
 ---
 
-## 🛠️ Tech Stack Architecture
+## 🧩 Tech Stack
 
-| Layer | Technology | Purpose |
-| :--- | :--- | :--- |
-| **Core Framework** | React 18+ | Declarative UI structure and high-speed component lifecycle rendering. |
-| **Build & Tooling** | Vite | Rapid Hot Module Replacement (HMR) and optimized distribution builds. |
-| **State Container** | Redux Toolkit | Centralized, deterministic data store managing immutable mutation actions. |
-| **Design Engine** | Native CSS3 | Smooth layout distributions using Flexbox, CSS Grid, and custom transitions. |
-| **Iconography** | Lucide React | Uniform SVG vector icons for cart, deletion, and volume markers. |
+- React 18
+- Vite
+- Redux Toolkit
+- React Redux
+- CSS for responsive layout and cards
 
 ---
 
-## 📂 Project Directory Structure
+## 📁 Core Files
 
-```text
-e-plantShopping/
-├── public/                  # Static assets and public resources
-├── src/
-│   ├── components/
-│   │   ├── AboutUs.jsx      # Company background, mission statement and values
-│   │   ├── CartItem.jsx     # Detailed shopping cart review table and control links
-│   │   └── ProductList.jsx  # Structured plant catalog split into care categories
-│   ├── store/
-│   │   └── CartSlice.jsx    # Slice specifying Redux action methods (add, remove, update)
-│   ├── App.css              # Main stylesheets, hero background images, and layout rules
-│   ├── App.jsx              # Application shell containing root navigation flow switches
-│   └── main.jsx             # Entry script compiling React DOM inside the Redux Provider wrapper
-├── Package.json             # App scripts and dependency definitions
-└── README.md                # Repository documentation manual
+- `src/main.jsx` — app entry point and Redux provider setup
+- `src/App.jsx` — root layout and landing-to-shop view management
+- `src/AboutUs.jsx` — brand/story section for the landing page
+- `src/ProductList.jsx` — plant catalog, add-to-cart actions, and page navigation
+- `src/CartItem.jsx` — cart review page with quantity controls and remove actions
+- `src/Checkout.jsx` — checkout summary page with confirmation
+- `src/CartSlice.jsx` — Redux slice for cart state and actions
+- `src/App.css` — landing page and application container styling
+- `src/ProductList.css` — product grid and UI card styling
+- `src/CartItem.css` — cart page styling
+- `src/Checkout.css` — checkout summary styling
+- `src/AboutUs.css` — about section styling
+
+---
+
+## ▶️ Get Started
+
+```bash
+npm install
+npm run dev
+```
+
+Open the local Vite URL in your browser to explore the app.
+
+---
+
+## ✅ Build for production
+
+```bash
+npm run build
+```
+
+---
+
+## Notes
+
+- This project is a frontend prototype and does not include backend order processing.
+- Product information is stored locally inside `src/ProductList.jsx`.
+- The cart flow is managed through Redux state.
+
+---
+
+## 🤝 How to contribute
+
+If you want to extend the storefront: 
+
+- add new plant categories or products in `src/ProductList.jsx`
+- improve responsive styling in the component CSS files
+- add routing for separate shop, cart, and checkout pages
+- connect to a backend API for live product and order data
+
+Contributions are welcome via pull request or issue.
+
+---
+
+## License
+
+MIT
