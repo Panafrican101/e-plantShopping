@@ -6,11 +6,11 @@
 
 .about-us-card {
   width: min(100%, 920px);
-  background: rgba(255, 255, 255, 0.95);
+  background: #1e1209;
   border-radius: 28px;
   padding: 36px 42px;
-  box-shadow: 0 20px 50px rgba(55, 120, 68, 0.12);
-  border: 1px solid rgba(76, 175, 80, 0.14);
+  box-shadow: 0 20px 55px rgba(17, 11, 7, 0.55);
+  border: 1px solid rgba(255, 239, 180, 0.2);
   text-align: left;
 }
 
@@ -18,14 +18,27 @@
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 14px;
-  color: #1f4f26;
+  color: #ffedd9;
+}
+
+.about-us-image {
+  width: 100%;
+  max-width: 880px;
+  display: block;
+  margin: 20px auto 32px;
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(9, 48, 24, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .about-us-description {
   font-size: 1.1rem;
-  color: #4a5d48;
   margin-bottom: 28px;
   line-height: 1.8;
+  background: linear-gradient(90deg, #ff4d8f 0%, #ff8cc4 40%, #fcb8a1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 1px 4px rgba(112, 28, 58, 0.35);
 }
   
 .about-us-section {
@@ -35,19 +48,20 @@
 .about-us-section h2 {
   font-size: 1.35rem;
   margin-bottom: 12px;
-  color: #336337;
+  color: #ffbad2;
 }
 
 .about-us-section p {
-  color: #596953;
+  color: #ffc1d4;
   line-height: 1.75;
   font-size: 1rem;
+  text-shadow: 0 1px 3px rgba(112, 28, 58, 0.25);
 }
 
 .about-us-list {
   list-style: disc;
   padding-left: 24px;
-  color: #556a54;
+  color: #ffbfd5;
   line-height: 1.8;
 }
 
@@ -56,15 +70,15 @@
 }
 
 .about-us-cta {
-  background: #eef8ed;
+  background: rgba(255, 238, 209, 0.16);
   border-radius: 18px;
   padding: 20px 22px;
-  border: 1px solid rgba(76, 175, 80, 0.12);
+  border: 1px solid rgba(255, 242, 207, 0.3);
 }
 
 .about-us-cta p {
   font-weight: 600;
-  color: #3d6c42;
+  color: #fffbeb;
 }
 
 @media (max-width: 768px) {

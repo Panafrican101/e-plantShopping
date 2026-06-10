@@ -399,9 +399,10 @@ function ProductList({ onHomeClick }) {
                                                 <p className="plant-cost">{formatPrice(plant.price)}</p>
                                                 <button
                                                     className="add-to-cart-button"
+                                                    disabled={isAdded}
                                                     onClick={() => handleAddToCart(plant)}
                                                 >
-                                                    {isAdded ? 'Add Again' : 'Add to Cart'}
+                                                    {isAdded ? 'Added' : 'Add to Cart'}
                                                 </button>
                                             </div>
                                         </div>

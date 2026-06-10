@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeItem, updateQuantity } from './CartSlice';
 import './CartItem.css';
@@ -16,14 +16,17 @@ const CartItem = ({ onContinueShopping, onCheckout }) => {
     return cart.reduce((total, item) => total + (item.price ?? parseCost(item.cost)) * item.quantity, 0).toFixed(2);
   };
 
+  const [checkoutMessage, setCheckoutMessage] = useState('');
+
   const handleContinueShopping = (e) => {
     e.preventDefault();
+    setCheckoutMessage('');
     onContinueShopping();
   };
 
   const handleCheckout = (e) => {
     e.preventDefault();
-    onCheckout();
+    setCheckoutMessage('Checkout is coming soon! Please continue shopping for more plants.');
   };
 
   const handleIncrement = (item) => {
@@ -81,6 +84,9 @@ const CartItem = ({ onContinueShopping, onCheckout }) => {
         <br />
         <button className="get-started-button1" onClick={handleCheckout}>Checkout</button>
       </div>
+      {checkoutMessage && (
+        <div className="checkout-coming-soon">{checkoutMessage}</div>
+      )}
     </div>
   );
 };

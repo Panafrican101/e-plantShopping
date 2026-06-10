@@ -1,11 +1,13 @@
 import React from 'react';
 import './AboutUs.css';
+import heroImage from './assets/paradise-nursery-hero.svg';
 
 function AboutUs() {
   return (
     <div className="about-us-container">
       <div className="about-us-card">
         <h1 className="about-us-heading">About Paradise Nursery</h1>
+        <img className="about-us-image" src={heroImage} alt="Paradise Nursery plants illustration" />
         <p className="about-us-description">
           Paradise Nursery is a modern online plant boutique built for indoor gardeners, apartment dwellers, and anyone who wants to bring more green into their life.
         </p>
